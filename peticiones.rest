@@ -3,5 +3,23 @@
 
 GET {{host}}/api/posts
 
+###
+POST {{host}}/api/posts
+
+###
+PUT {{host}}/api/posts/1
+
+###
+DELETE  {{host}}/api/posts/23
+
 ### 
 GET {{host}}/api/authors
+
+###
+POST {{host}}/api/authors
+
+###
+PUT {{host}}/api/authors/14
+
+###
+DELETE  {{host}}/api/authors/54

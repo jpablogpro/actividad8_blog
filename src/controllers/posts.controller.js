@@ -9,6 +9,10 @@ const getAllPosts = async (req, res, next) => {
     }
 }
 
+const getByAuthor = (req, res, next) => {
+    res.json({message: 'Recupero posts por autor'})
+}
+
 
 const createPost = async (req, res, next) => {
     try {
@@ -22,5 +26,5 @@ const createPost = async (req, res, next) => {
 
 
 module.exports = {
-    getAllPosts, createPost
+    getAllPosts, getByAuthor, createPost
 }

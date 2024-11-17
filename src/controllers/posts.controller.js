@@ -1,10 +1,23 @@
-const getAllPosts = (req, res, next) => {
-    res.send('Me devuelve todos los posts');
+const { selectAll, insertPost, selectById } = require("../models/posts.model");
+
+const getAllPosts = async (req, res, next) => {
+    try {
+        const [result] = await selectAll()
+        res.json(result);
+    } catch (error) {
+        next(error);
+    }
 }
 
 
-const createPost = (req, res, next) => {
-    res.send('Me crea un post');
+const createPost = async (req, res, next) => {
+    try {
+        const [result] = await insertPost(req.body)
+        const post = await selectById(result.insertId)
+        res.json(post);
+    } catch (error) {
+        next(error)
+    }
 }
 
 

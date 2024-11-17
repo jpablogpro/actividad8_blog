@@ -5,6 +5,7 @@ GET {{host}}/api/posts
 
 ###
 POST {{host}}/api/posts
+Content-Type: application/json
 
 {
     "titulo": "Victoria agonica del Madrid", 

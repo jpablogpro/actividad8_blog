@@ -14,6 +14,16 @@ async function selectById(postId) {
     return post[0]
 }
 
+async function selectByAuthorId(authorId) {
+    const [post] = await pool.query("select * from posts where author_id = ?", [authorId])
+
+    if (post.length === 0) {
+        return null
+    }
+
+    return post
+}
+
 function insertPost({ titulo, descripcion, fecha_creacion, categoria, author_id }) {
     return pool.query(
         'insert into posts (titulo, descripcion, fecha_creacion, categoria, author_id) values (?, ?, ?, ?, ?)',
@@ -22,5 +32,5 @@ function insertPost({ titulo, descripcion, fecha_creacion, categoria, author_id 
 }
 
 module.exports = {
-    selectAll, selectById, insertPost
+    selectAll, selectById, selectByAuthorId, insertPost
 }

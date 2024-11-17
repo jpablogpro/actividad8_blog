@@ -35,7 +35,6 @@ const createAuthor = async (req, res, next) => {
     }
 }
 
-
 module.exports = {
     getAllAuthors, createAuthor, getById
 }

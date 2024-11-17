@@ -5,7 +5,7 @@ GET {{host}}/api/posts
 
 
 ###
-GET {{host}}/api/posts/1
+GET {{host}}/api/posts/5
 
 
 ###

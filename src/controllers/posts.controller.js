@@ -8,16 +8,6 @@ const createPost = (req, res, next) => {
 }
 
 
-const updatePost = (req, res, next) => {
-    res.send('Me actualiza un post');
-}
-
-
-const deletePost = (req, res, next) => {
-    res.send('Me elimina un post');
-}
-
-
 module.exports = {
-    getAllPosts, createPost, updatePost, deletePost
+    getAllPosts, createPost
 }

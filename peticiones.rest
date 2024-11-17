@@ -13,11 +13,6 @@ POST {{host}}/api/posts
     "categoria": "noticia",
     "author_id": 1
 }
-###
-PUT {{host}}/api/posts/1
-
-###
-DELETE  {{host}}/api/posts/23
 
 ### 
 GET {{host}}/api/authors
@@ -27,12 +22,7 @@ POST {{host}}/api/authors
 Content-Type: application/json
 
 {
-    "nombre": "Maria Via",
-    "email": "maria.via @email.com",
-    "imagen": "https://example.com/images/maria.jpg" 
+    "nombre": "Jose Vila",
+    "email": "jose.vila@email.com",
+    "imagen": "https://example.com/images/jose.jpg" 
 }
-###
-PUT {{host}}/api/authors/14
-
-###
-DELETE  {{host}}/api/authors/54

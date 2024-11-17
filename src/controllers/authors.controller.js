@@ -9,6 +9,21 @@ const getAllAuthors = async (req, res, next) => {
     }
 }
 
+const getById = async (req, res, next) => {
+ const { authorId } = req.params;
+ 
+ try {
+    const author = await selectById(authorId)
+    if (!author) {
+        return res.status(404).json({
+            message: 'El autor no existe en la base de datos'
+        })
+        res.json(author)
+    }
+ } catch (error) {
+    next(error)
+ }
+}
 
 const createAuthor = async (req, res, next) => {
     try {
@@ -21,16 +36,6 @@ const createAuthor = async (req, res, next) => {
 }
 
 
-const updateAuthor = (req, res, next) => {
-    res.send('Me actualiza un autor');
-}
-
-
-const deleteAuthor = (req, res, next) => {
-    res.send('Me elimina un autor');
-}
-
-
 module.exports = {
-    getAllAuthors, createAuthor, updateAuthor, deleteAuthor
+    getAllAuthors, createAuthor, getById
 }

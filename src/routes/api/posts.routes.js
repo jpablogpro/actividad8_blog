@@ -2,9 +2,9 @@ const { getAllPosts, createPost, updatePost, deletePost } = require('../../contr
 
 const router = require('express').Router();
 
-router.get('/', getAllPosts)
-router.post('/', createPost)
-router.put('/:postId', updatePost)
-router.delete('/:postId', deletePost)
+router.get('/', getAllPosts);
+router.post('/', createPost);
+router.put('/:postId', updatePost);
+router.delete('/:postId', deletePost);
 
 module.exports = router;

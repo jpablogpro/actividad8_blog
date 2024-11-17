@@ -6,6 +6,13 @@ GET {{host}}/api/posts
 ###
 POST {{host}}/api/posts
 
+{
+    "titulo": "Victoria agonica del Madrid", 
+    "descripcion": "El Madrid ganó la Champions en el último minuto",
+    "fecha_creacion": "2024-11-17",
+    "categoria": "noticia",
+    "author_id": 1
+}
 ###
 PUT {{host}}/api/posts/1
 
@@ -17,7 +24,13 @@ GET {{host}}/api/authors
 
 ###
 POST {{host}}/api/authors
+Content-Type: application/json
 
+{
+    "nombre": "Maria Via",
+    "email": "maria.via @email.com",
+    "imagen": "https://example.com/images/maria.jpg" 
+}
 ###
 PUT {{host}}/api/authors/14
 

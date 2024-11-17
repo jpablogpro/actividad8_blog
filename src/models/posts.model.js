@@ -1,7 +1,7 @@
 const pool = require("../config/db")
 
 function selectAll() {
-    return pool.query("select * from posts;")
+    return pool.query("SELECT * FROM posts p JOIN authors a ON p.author_id = a.id")
 }
 
 async function selectById(postId) {

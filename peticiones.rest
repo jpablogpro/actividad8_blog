@@ -25,6 +25,10 @@ GET {{host}}/api/authors
 
 
 ###
+GET {{host}}/api/authors/3
+
+
+###
 POST {{host}}/api/authors
 Content-Type: application/json
 

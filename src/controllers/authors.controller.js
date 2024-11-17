@@ -18,9 +18,9 @@ const getById = async (req, res, next) => {
         return res.status(404).json({
             message: 'El autor no existe en la base de datos'
         })
-        res.json(author)
     }
- } catch (error) {
+    res.json(author)
+} catch (error) {
     next(error)
  }
 }

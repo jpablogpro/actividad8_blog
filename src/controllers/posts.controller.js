@@ -16,13 +16,14 @@ const getByAuthor = async (req, res, next) => {
     try {
         const author = await selectAuthorById(authorId)
         if (!author) {
-            return res.status(404).json({
+            return res.status(401).json({
                 message: 'El autor no existe en la base de datos'
             })
         }
         const post = await selectByAuthorId(authorId)
-        if (!post) {
-            return res.status(404).json({
+
+        if (post.length === 0) {
+            return res.json({
                 message: 'El autor no tiene posts publicados'
             })
        }

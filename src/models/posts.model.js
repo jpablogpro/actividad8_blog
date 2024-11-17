@@ -17,10 +17,6 @@ async function selectById(postId) {
 async function selectByAuthorId(authorId) {
     const [post] = await pool.query("select * from posts where author_id = ?", [authorId])
 
-    if (post.length === 0) {
-        return null
-    }
-
     return post
 }
 
